@@ -26,8 +26,6 @@ jobs:
       - name: ➕ Increment patch version
         run: |
           yarn config set version-git-tag false
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           yarn version --patch --no-git-tag-version
 
       - name: 🔧 Install dependencies
@@ -41,8 +39,6 @@ jobs:
 
       - name: Push version incrementation
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add package.json
           git commit -m "[skip ci] new package version"
           export REMOTE="https://${{ github.actor }}:${{ secrets.TOKEN_GITHUB }}@github.com/${GITHUB_REPOSITORY}.git"
