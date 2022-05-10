@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb-typescript', 'plugin:storybook/recommended'],
+  extends: ['plugin:storybook/recommended'],
   parserOptions: {
     project: './tsconfig.json',
   },
