@@ -39,16 +39,11 @@ jobs:
 
       - name: Push version incrementation
         uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
-        with:
-          add: package.json
-          author_name: [BOT] Pingu
-          author_email: pingu@nupesnupes.fr
-          message: '[skip ci] new package version'
-        run: |
-          git add package.json
-          git commit -m "[skip ci] new package version"
-          export REMOTE="https://${{ github.actor }}:${{ secrets.TOKEN_GITHUB }}@github.com/${GITHUB_REPOSITORY}.git"
-          git push "${REMOTE}" HEAD:main
+          with:
+            add: package.json
+            author_name: [BOT] Pingu
+            author_email: pingu@nupesnupes.fr
+            message: '[skip ci] new package version'
 
       - name: 🙊 Setup registry for publication
         uses: actions/setup-node@v2
