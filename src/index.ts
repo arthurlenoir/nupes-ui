@@ -1,2 +1,3 @@
-export { Button } from './stories/Button';
-export type { ButtonProps } from './stories/Button';
+export { GlobalStyle } from "./GlobalStyle";
+export { NupesLogo } from "./components/NupesLogo";
+export { Title } from "./components/Title";
