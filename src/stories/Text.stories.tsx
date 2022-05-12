@@ -1,17 +1,17 @@
 import React from "react";
-import { Title } from "../components/Title";
+import { Text } from "../components/Text";
 import { GlobalStyle } from "../GlobalStyle";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Typography/Title",
-  component: Title,
+  title: "Typography/Text",
+  component: Text,
 };
 
-export const TitleStories = () => (
+export const TextStories = () => (
   <div>
-    <h1>Titre</h1>
-    <Title>Mélenchon 1er ministre</Title>
+    <h1>Texte</h1>
+    <Text>La nouvelle union populaire écologique et sociale</Text>
     <GlobalStyle />
   </div>
 );

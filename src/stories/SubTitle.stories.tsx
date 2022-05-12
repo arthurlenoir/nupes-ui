@@ -1,17 +1,17 @@
 import React from "react";
-import { Title } from "../components/Title";
+import { SubTitle } from "../components/SubTitle";
 import { GlobalStyle } from "../GlobalStyle";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Typography/Title",
-  component: Title,
+  title: "Typography/SubTitle",
+  component: SubTitle,
 };
 
-export const TitleStories = () => (
+export const SubTitleStories = () => (
   <div>
-    <h1>Titre</h1>
-    <Title>Mélenchon 1er ministre</Title>
+    <h1>Sous-titre</h1>
+    <SubTitle>Un autre monde est possible</SubTitle>
     <GlobalStyle />
   </div>
 );
