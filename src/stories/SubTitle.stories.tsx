@@ -1,6 +1,6 @@
 import React from "react";
 import { SubTitle } from "../components/SubTitle";
-import { GlobalStyle } from "../GlobalStyle";
+import ThemeProvider from "../components/ThemeProvider";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -9,9 +9,8 @@ export default {
 };
 
 export const SubTitleStories = () => (
-  <div>
+  <ThemeProvider>
     <h1>Sous-titre</h1>
     <SubTitle>Un autre monde est possible</SubTitle>
-    <GlobalStyle />
-  </div>
+  </ThemeProvider>
 );

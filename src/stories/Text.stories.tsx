@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "../components/Text";
-import { GlobalStyle } from "../GlobalStyle";
+import ThemeProvider from "../components/ThemeProvider";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -9,9 +9,8 @@ export default {
 };
 
 export const TextStories = () => (
-  <div>
+  <ThemeProvider>
     <h1>Texte</h1>
     <Text>La nouvelle union populaire écologique et sociale</Text>
-    <GlobalStyle />
-  </div>
+  </ThemeProvider>
 );
