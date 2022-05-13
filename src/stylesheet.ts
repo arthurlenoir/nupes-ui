@@ -6,7 +6,7 @@ export enum NupesColors {
   PURPLE = "rgb(80,37,130)",
 }
 
-enum OtherColors {
+export enum OtherColors {
   WHITE = "rgb(255, 255, 255)",
   BLACK = "rgb(0, 0, 0)",
 }

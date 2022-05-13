@@ -5,7 +5,7 @@ import { NupesColors } from "../stylesheet";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Typography/Title",
+  title: "Typography",
   component: Title,
 };
 

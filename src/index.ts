@@ -1,3 +1,3 @@
 export { GlobalStyle } from "./GlobalStyle";
-export { NupesLogo } from "./components/NupesLogo";
+export { LogoNupes, LogoEELV, LogoLFI } from "./components/Logos";
 export { Title } from "./components/Title";
