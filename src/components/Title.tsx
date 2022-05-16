@@ -11,7 +11,7 @@ export interface TitleProps {
 const TitleElement = styled.h1<{ variant?: TitleVariant }>`
   font-family: "Apotek Comp Black";
   text-transform: uppercase;
-  padding: 0 16px;
+  padding: 8px 16px;
   margin: 8px -16px 16px;
   ${({ theme, variant }) =>
     variant === "primary" &&
