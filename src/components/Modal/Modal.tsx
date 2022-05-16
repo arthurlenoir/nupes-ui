@@ -56,17 +56,21 @@ const ModalContent = styled.aside<ModalContainerProps>`
     `}
 `;
 
+const stopPropagation = (e: React.MouseEvent) => e.stopPropagation();
+
 export const Modal: React.FC<ModalProps> = ({ visible, close, children }) => {
   const onClick = useCallback(
     (e: React.MouseEvent) => {
-      e.stopPropagation();
+      stopPropagation(e);
       close();
     },
     [close]
   );
   return (
     <ModalContainer onClick={onClick} visible={visible}>
-      <ModalContent visible={visible}>{children}</ModalContent>
+      <ModalContent onClick={stopPropagation} visible={visible}>
+        {children}
+      </ModalContent>
     </ModalContainer>
   );
 };
