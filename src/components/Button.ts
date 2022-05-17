@@ -11,7 +11,7 @@ interface ButtonProps {
 
 export const Button = styled.button<ButtonProps>`
   height: 40px;
-  padding: 0 16px;
+  padding: 2px 16px 0;
   white-space: nowrap;
   border: 1px solid ${OtherColors.BLACK};
   outline: 0;
@@ -28,6 +28,7 @@ export const Button = styled.button<ButtonProps>`
     css`
       background-color: ${theme.colors.primary.background};
       color: ${theme.colors.primary.foreground};
+      border: ${theme.colors.primary.background};
     `}
   ${({ theme, variant }) =>
     variant === "secondary" &&
