@@ -7,11 +7,11 @@ export enum NupesColors {
 }
 
 export enum LightNupesColors {
-  GREEN = "rgb(149,212,178)",
-  YELLOW = "rgb(255,236,0)", //TODO
-  RED = "rgb(245,59,59)", //TODO
-  PINK = "rgb(248,49,160)", //TODO
-  PURPLE = "#c0b0d2",
+  GREEN = "rgba(52,173,108,0.5)",
+  YELLOW = "rgba(255,236,0,0.5)",
+  RED = "rgba(245,59,59,0.5)",
+  PINK = "rgba(248,49,160,0.5)",
+  PURPLE = "rgba(80,37,130,0.5)",
 }
 
 export enum OtherColors {
@@ -22,10 +22,10 @@ export enum OtherColors {
 export type Colors = NupesColors | OtherColors;
 
 const complementaryColors: Record<NupesColors, Colors> = {
-  [NupesColors.GREEN]: OtherColors.WHITE,
+  [NupesColors.GREEN]: OtherColors.BLACK,
   [NupesColors.YELLOW]: OtherColors.BLACK,
   [NupesColors.RED]: OtherColors.WHITE,
-  [NupesColors.PINK]: OtherColors.WHITE,
+  [NupesColors.PINK]: OtherColors.BLACK,
   [NupesColors.PURPLE]: OtherColors.WHITE,
 };
 
