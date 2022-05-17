@@ -11,7 +11,7 @@ interface ButtonProps {
 
 export const Button = styled.button<ButtonProps>`
   height: 40px;
-  padding: 2px 16px 0;
+  padding: 4px 16px 0;
   white-space: nowrap;
   border: 1px solid ${OtherColors.BLACK};
   outline: 0;
