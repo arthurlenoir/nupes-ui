@@ -23,6 +23,9 @@ export const Button = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    opacity: 0.85;
+  }
   ${({ theme, variant }) =>
     variant === "primary" &&
     css`
