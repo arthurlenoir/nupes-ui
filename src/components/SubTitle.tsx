@@ -11,6 +11,7 @@ export interface SubTitleProps {
 
 const SubTitleElement = styled.h2`
   font-family: "Acumin Pro Condensed Black";
+  font-weight: normal;
 `;
 
 export const SubTitle: React.FC<SubTitleProps> = ({
