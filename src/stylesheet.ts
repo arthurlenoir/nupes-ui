@@ -22,7 +22,7 @@ export enum OtherColors {
 export type Colors = NupesColors | OtherColors;
 
 const complementaryColors: Record<NupesColors, Colors> = {
-  [NupesColors.GREEN]: OtherColors.BLACK,
+  [NupesColors.GREEN]: OtherColors.WHITE,
   [NupesColors.YELLOW]: OtherColors.BLACK,
   [NupesColors.RED]: OtherColors.WHITE,
   [NupesColors.PINK]: OtherColors.BLACK,
