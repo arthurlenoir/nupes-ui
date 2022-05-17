@@ -1,7 +1,13 @@
 import "styled-components";
 import React from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { NupesColors, Colors, getComplentaryColor } from "../stylesheet";
+import {
+  NupesColors,
+  Colors,
+  getComplentaryColor,
+  LightNupesColors,
+  getLightColor,
+} from "../stylesheet";
 import { GlobalStyle } from "../GlobalStyle";
 
 declare module "styled-components" {
@@ -10,10 +16,12 @@ declare module "styled-components" {
       primary: {
         background: NupesColors;
         foreground: Colors;
+        lightBackground: LightNupesColors;
       };
       secondary: {
         background: NupesColors;
         foreground: Colors;
+        lightBackground: LightNupesColors;
       };
     };
   }
@@ -36,10 +44,12 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
         primary: {
           background: primary,
           foreground: getComplentaryColor(primary),
+          lightBackground: getLightColor(primary),
         },
         secondary: {
           background: secondary,
           foreground: getComplentaryColor(secondary),
+          lightBackground: getLightColor(secondary),
         },
       },
     }}

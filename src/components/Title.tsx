@@ -1,12 +1,27 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { Highlight, HighlightVariant } from "./Highlight";
 
-export type TitleVariant = "primary" | "secondary";
+export type TitleVariant =
+  | "primary"
+  | "secondary"
+  | "light-primary"
+  | "light-secondary";
 
 export interface TitleProps {
   children: React.ReactNode;
   variant?: TitleVariant;
 }
+
+const titleVariantToHighlightVariant: Record<
+  TitleVariant,
+  HighlightVariant | undefined
+> = {
+  primary: undefined,
+  secondary: undefined,
+  "light-primary": "primary",
+  "light-secondary": "secondary",
+};
 
 const TitleElement = styled.h1<{ variant?: TitleVariant }>`
   font-family: "Apotek Comp Black";
@@ -27,6 +42,19 @@ const TitleElement = styled.h1<{ variant?: TitleVariant }>`
     `}
 `;
 
-export const Title: React.FC<TitleProps> = ({ children, ...props }) => (
-  <TitleElement {...props}>{children}</TitleElement>
-);
+export const Title: React.FC<TitleProps> = ({
+  children,
+  variant,
+  ...props
+}) => {
+  const highlightVariant = variant && titleVariantToHighlightVariant[variant];
+  return (
+    <TitleElement variant={variant} {...props}>
+      {highlightVariant ? (
+        <Highlight variant={highlightVariant}>{children}</Highlight>
+      ) : (
+        children
+      )}
+    </TitleElement>
+  );
+};

@@ -6,6 +6,14 @@ export enum NupesColors {
   PURPLE = "rgb(80,37,130)",
 }
 
+export enum LightNupesColors {
+  GREEN = "rgb(149,212,178)",
+  YELLOW = "rgb(255,236,0)", //TODO
+  RED = "rgb(245,59,59)", //TODO
+  PINK = "rgb(248,49,160)", //TODO
+  PURPLE = "#c0b0d2",
+}
+
 export enum OtherColors {
   WHITE = "rgb(255, 255, 255)",
   BLACK = "rgb(0, 0, 0)",
@@ -21,5 +29,15 @@ const complementaryColors: Record<NupesColors, Colors> = {
   [NupesColors.PURPLE]: OtherColors.WHITE,
 };
 
+const ligherColors: Record<NupesColors, LightNupesColors> = {
+  [NupesColors.GREEN]: LightNupesColors.GREEN,
+  [NupesColors.YELLOW]: LightNupesColors.YELLOW,
+  [NupesColors.RED]: LightNupesColors.RED,
+  [NupesColors.PINK]: LightNupesColors.PINK,
+  [NupesColors.PURPLE]: LightNupesColors.PURPLE,
+};
+
 export const getComplentaryColor = (color: NupesColors) =>
   complementaryColors[color];
+
+export const getLightColor = (color: NupesColors) => ligherColors[color];

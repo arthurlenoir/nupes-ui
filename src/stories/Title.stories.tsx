@@ -17,5 +17,9 @@ export const TitleStories = () => (
     <Title variant="primary">Ruffin 1er ministre</Title>
     <h1>Titre Secondaire</h1>
     <Title variant="secondary">Rousseau 1ère ministre</Title>
+    <h1>Titre mis en avant primaire</h1>
+    <Title variant="light-primary">Un autre monde est possible</Title>
+    <h1>Titre mis en avant secondaire</h1>
+    <Title variant="light-secondary">Un autre monde est possible</Title>
   </ThemeProvider>
 );

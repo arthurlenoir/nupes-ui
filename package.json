@@ -1,6 +1,6 @@
 {
   "name": "nupes-ui",
-  "version": "0.0.14",
+  "version": "0.0.18",
   "description": "collections of react components with NUPES theme",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
