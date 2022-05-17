@@ -12,14 +12,12 @@ interface ButtonProps {
 export const Button = styled.button<ButtonProps>`
   height: 40px;
   padding: 0 16px;
-  border-radius: 20px;
   white-space: nowrap;
-  border: 0;
+  border: 1px solid ${OtherColors.BLACK};
   outline: 0;
   cursor: pointer;
   background-color: ${OtherColors.WHITE};
   color: ${OtherColors.BLACK};
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
   font-family: "Acumin Pro";
   font-size: 16px;
   display: flex;
@@ -36,12 +34,12 @@ export const Button = styled.button<ButtonProps>`
     css`
       background-color: ${theme.colors.secondary.background};
       color: ${theme.colors.secondary.foreground};
+      border: ${theme.colors.secondary.foreground};
     `}
     ${({ size }) =>
     size === "big" &&
     css`
       height: 56px;
-      border-radius: 28px;
       padding: 0 24px;
       font-size: 22px;
     `}
@@ -49,7 +47,6 @@ export const Button = styled.button<ButtonProps>`
     size === "small" &&
     css`
       height: 28px;
-      border-radius: 14px;
       font-size: 14px;
       padding: 0 12px;
     `}
