@@ -99,14 +99,14 @@ export const LogoNupes: React.FC<NupesLogoProps> = ({
             id="stop44878"
           />
           <stop
-            stopColor="#b91b3e;stop-opacity:0.98039216"
+            stopColor="#b91b3e"
             stopOpacity={0.98039216}
             offset="1"
             id="stop40372"
           />
         </linearGradient>
         <linearGradient id="linearGradient23803">
-          <stop offset="0" stopColor="#368e52" id="stop23801" />
+          <stop stopColor="#368e52" stopOpacity={1} offset="0" id="stop23801" />
         </linearGradient>
         <linearGradient
           xlinkHref="#linearGradient40374"
