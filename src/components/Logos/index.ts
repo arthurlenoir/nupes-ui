@@ -1,3 +1,4 @@
+export * from "./LogoConfPaysanne";
 export * from "./LogoEELV";
 export * from "./LogoGenerations";
 export * from "./LogoLFI";

@@ -2,6 +2,7 @@ export { default as ThemeProvider } from "./components/ThemeProvider";
 export { Button } from "./components/Button";
 export { Highlight } from "./components/Highlight";
 export {
+  LogoConfPaysanne,
   LogoNupes,
   LogoEELV,
   LogoLFI,
