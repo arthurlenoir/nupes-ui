@@ -54,7 +54,7 @@ const ModalContent = styled.aside<ModalContainerProps>`
     visible &&
     css`
       transform: scale(1);
-      opacity: 0;
+      opacity: 1;
       transition: transform ${transitions.default},
         opacity ${transitions.default};
     `}
