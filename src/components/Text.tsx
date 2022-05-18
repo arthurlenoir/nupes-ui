@@ -7,6 +7,7 @@ export interface TextProps {
 
 const TextElement = styled.p`
   font-family: "Acumin Pro";
+  line-height: 1.2em;
 `;
 
 export const Text: React.FC<TextProps> = ({ children, ...props }) => (

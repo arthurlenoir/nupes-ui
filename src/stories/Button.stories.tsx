@@ -14,6 +14,8 @@ export const ButtonStories = () => (
     <Button>button</Button>
     <h1>Primary button</h1>
     <Button variant="primary">button</Button>
+    <h1>Primary button light</h1>
+    <Button variant="primary-light">button</Button>
     <h1>Secondary button</h1>
     <Button variant="secondary">button</Button>
     <h1>Primary big button</h1>

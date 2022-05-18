@@ -41,7 +41,7 @@ const ModalContent = styled.aside<ModalContainerProps>`
   background-color: ${OtherColors.WHITE};
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   max-height: 100%;
   display: block;
