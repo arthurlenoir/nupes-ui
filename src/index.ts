@@ -1,6 +1,7 @@
 export { default as ThemeProvider } from "./components/ThemeProvider";
 export { Button } from "./components/Button";
 export { Highlight } from "./components/Highlight";
+export { Input } from "./components/Input";
 export {
   LogoConfPaysanne,
   LogoNupes,

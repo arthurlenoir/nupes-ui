@@ -41,3 +41,9 @@ export const getComplentaryColor = (color: NupesColors) =>
   complementaryColors[color];
 
 export const getLightColor = (color: NupesColors) => ligherColors[color];
+
+export const transitions = {
+  fast: `100ms ease-in-out`,
+  default: `200ms ease-in-out`,
+  delayed: `0s linear 200ms`,
+};
