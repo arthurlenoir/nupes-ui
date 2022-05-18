@@ -14,7 +14,7 @@ const Label = styled.label<{ isFocus?: boolean }>`
   padding: 8px 0 0;
   height: 45px;
   box-sizing: border-box;
-  margin: 0 0 24px;
+  margin: 8px 0 16px;
   display: block;
   width: 100%;
   position: relative;
@@ -52,7 +52,7 @@ const LabelText = styled.div<LabelTextProps>`
     position === LabelPositions.TOP &&
     css`
       font-size: 14px;
-      top: 0px;
+      top: -4px;
       opacity: 0.75;
     `}
 `;

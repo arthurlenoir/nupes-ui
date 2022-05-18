@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import styled, { css } from "styled-components";
-import { OtherColors } from "../../stylesheet";
+import { OtherColors, transitions } from "../../stylesheet";
 
 interface ModalProps {
   visible: boolean;
@@ -18,7 +18,8 @@ const ModalContainer = styled.div<ModalContainerProps>`
   z-index: -1;
   width: 100%;
   height: 0;
-  transition: background-color 200ms ease-in-out, z-index 0s linear 200ms;
+  transition: background-color ${transitions.default},
+    z-index ${transitions.delayed};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +27,7 @@ const ModalContainer = styled.div<ModalContainerProps>`
   ${({ visible }) =>
     visible &&
     css`
-      transition: background-color 200ms ease-in-out;
+      transition: background-color ${transitions.default};
       height: 100%;
       background-color: rgba(0, 0, 0, 0.55);
       padding: 16px;
@@ -45,14 +46,17 @@ const ModalContent = styled.aside<ModalContainerProps>`
   width: 100%;
   max-height: 100%;
   display: block;
+  opacity: 0;
   transform: scale(0);
-  transition: transform 200ms ease-in-out;
+  transition: transform ${transitions.default}, opacity ${transitions.default};
   box-sizing: border-box;
   ${({ visible }) =>
     visible &&
     css`
       transform: scale(1);
-      transition: transform 200ms ease-in-out;
+      opacity: 0;
+      transition: transform ${transitions.default},
+        opacity ${transitions.default};
     `}
 `;
 
