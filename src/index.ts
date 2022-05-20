@@ -1,5 +1,6 @@
 export { default as ThemeProvider } from "./components/ThemeProvider";
 export { Button } from "./components/Button";
+export { Gauge } from "./components/Gauge";
 export { Highlight } from "./components/Highlight";
 export { Input } from "./components/Input";
 export {
