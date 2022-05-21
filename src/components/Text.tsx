@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export interface TextProps {
+export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
 }
 

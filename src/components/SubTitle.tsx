@@ -4,7 +4,8 @@ import { Highlight } from "./Highlight";
 
 export type SubTitleVariant = "primary" | "secondary";
 
-export interface SubTitleProps {
+export interface SubTitleProps
+  extends React.HTMLAttributes<HTMLHeadingElement> {
   variant?: SubTitleVariant;
   children: React.ReactNode;
 }

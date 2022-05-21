@@ -8,7 +8,7 @@ export type TitleVariant =
   | "light-primary"
   | "light-secondary";
 
-export interface TitleProps {
+export interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
   variant?: TitleVariant;
 }

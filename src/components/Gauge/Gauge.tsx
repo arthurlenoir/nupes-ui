@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { transitions } from "../../stylesheet";
 
-interface GaugeProps {
+export type GaugeDisplayMode = "percent" | "value";
+
+export interface GaugeProps {
   target: number;
   value: number;
+  displayMode?: GaugeDisplayMode;
+  children?: React.ReactNode;
 }
 
 const MainContainer = styled.div`
@@ -40,12 +44,18 @@ const GaugeContainer = styled.div<GaugeContainerProps>`
   `}
 `;
 
-const PercentLabel = styled.div`
+const GaugeValue = styled.div`
   font-family: "Acumin Pro Condensed Black";
   line-height: 1em;
+  white-space: nowrap;
 `;
 
-export const Gauge: React.FC<GaugeProps> = ({ target, value }) => {
+export const Gauge: React.FC<GaugeProps> = ({
+  target,
+  value,
+  displayMode,
+  children,
+}) => {
   const [gaugePercent, setGaugePercent] = useState<number>(0);
   const percent = Math.round((100 * value) / target);
   useEffect(() => {
@@ -55,7 +65,19 @@ export const Gauge: React.FC<GaugeProps> = ({ target, value }) => {
   return (
     <MainContainer>
       <GaugeContainer percent={gaugePercent}></GaugeContainer>
-      <PercentLabel>{percent} %</PercentLabel>
+      {children ? (
+        <div>{children}</div>
+      ) : displayMode === "value" ? (
+        <GaugeValue>
+          {value} / {target}
+        </GaugeValue>
+      ) : (
+        <GaugeValue>{percent} %</GaugeValue>
+      )}
     </MainContainer>
   );
+};
+
+Gauge.defaultProps = {
+  displayMode: "percent",
 };

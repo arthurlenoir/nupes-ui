@@ -4,6 +4,7 @@ export type HighlightVariant = "primary" | "secondary";
 
 interface HighlightProps {
   variant?: HighlightVariant;
+  small?: boolean;
 }
 
 export const Highlight = styled.span<HighlightProps>`
@@ -26,5 +27,11 @@ export const Highlight = styled.span<HighlightProps>`
         ? theme.colors.secondary.lightBackground
         : theme.colors.primary.lightBackground};
     `}
+    ${({ small }) =>
+      small &&
+      css`
+        left: 0;
+        right: 0;
+      `}
   }
 `;
