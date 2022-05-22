@@ -6,6 +6,8 @@ import {
   LogoPS,
   LogoGenerations,
   LogoConfPaysanne,
+  LogoGenerationE,
+  LogoREV,
 } from "../Logos";
 import React from "react";
 import styled from "styled-components";
@@ -16,8 +18,10 @@ enum PartyNames {
   PS = "PS",
   PCF = "PCF",
   Generations = "Generations",
+  GenerationE = "Generation E",
   ND = "ND",
   CP = "ConfPaysanne",
+  REV = "REV",
 }
 
 interface Props {
@@ -29,8 +33,10 @@ const DEFAULT_LOGOS: PartyNames[] = [
   PartyNames.EELV,
   PartyNames.PS,
   PartyNames.PCF,
+  PartyNames.GenerationE,
   PartyNames.Generations,
   PartyNames.ND,
+  PartyNames.REV,
 ];
 
 const LogoPerName: Record<PartyNames, React.FC> = {
@@ -38,9 +44,11 @@ const LogoPerName: Record<PartyNames, React.FC> = {
   [PartyNames.EELV]: () => <LogoEELV height={80} />,
   [PartyNames.PS]: () => <LogoPS height={70} />,
   [PartyNames.PCF]: () => <LogoPCF height={70} />,
+  [PartyNames.GenerationE]: () => <LogoGenerationE width={150} />,
   [PartyNames.Generations]: () => <LogoGenerations width={150} />,
   [PartyNames.ND]: () => <LogoND height={70} />,
   [PartyNames.CP]: () => <LogoConfPaysanne height={70} />,
+  [PartyNames.REV]: () => <LogoREV height={80} />,
 };
 
 const LogosSoupContainer = styled.div`

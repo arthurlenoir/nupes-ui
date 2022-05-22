@@ -14,10 +14,12 @@ export {
   LogoEELV,
   LogoLFI,
   LogoNupesWithText,
+  LogoGenerationE,
   LogoGenerations,
   LogoPCF,
   LogoPS,
   LogoND,
+  LogoREV,
 } from "./components/Logos";
 export { LogoSoup } from "./components/LogoSoup";
 export { Modal } from "./components/Modal";

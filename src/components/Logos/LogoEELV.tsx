@@ -59,7 +59,7 @@ export const LogoEELV: React.FC<LogoEELVProps> = ({
             />
           </g>
           <g id="g44">
-            <g clip-path="url(#clipPath50)" id="g46">
+            <g clipPath="url(#clipPath50)" id="g46">
               <g transform="translate(259.7491,159.5845)" id="g52">
                 <path
                   id="path54"

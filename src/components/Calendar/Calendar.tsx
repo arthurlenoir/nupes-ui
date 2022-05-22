@@ -52,7 +52,8 @@ export const Calendar: React.FC<Props> = ({
   );
 
   if (!events) return <Text>{loadingText || "Chargement en cours..."}</Text>;
-  if (!noEventsText) return <Text>{noEventsText || "Rien à l'horizon."}</Text>;
+  if (events.length === 0)
+    return <Text>{noEventsText || "Rien à l'horizon."}</Text>;
 
   return <EventsContainer>{events.map(renderCalendarEvent)}</EventsContainer>;
 };

@@ -18,11 +18,7 @@ export const LogoPS: React.FC<LogoPSProps> = ({
   return (
     <svg
       xmlSpace="preserve"
-      enable-background="new 0 0 1559.1 1559.1"
       viewBox="0 0 1337.3001 929.90004"
-      y="0px"
-      x="0px"
-      id="logo"
       version="1.1"
       width={width ?? (height ? undefined : DEFAULT_WIDTH)}
       height={height ?? (width ? undefined : DEFAULT_HEIGHT)}
