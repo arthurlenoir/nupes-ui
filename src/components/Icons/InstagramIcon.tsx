@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 type Props = React.SVGProps<SVGSVGElement>;
 
 const DEFAULT_WIDTH = 28;
 const DEFAULT_HEIGHT = 28;
 
-export const InstagramIcon: React.FC<Props> = ({width, height, ...props}) => (
+export const InstagramIcon: React.FC<Props> = ({ width, height, ...props }) => (
   <svg
     width={width ?? (height ? undefined : DEFAULT_WIDTH)}
     height={height ?? (width ? undefined : DEFAULT_HEIGHT)}
@@ -13,18 +13,19 @@ export const InstagramIcon: React.FC<Props> = ({width, height, ...props}) => (
     xmlSpace="preserve"
     viewBox="0 0 132 132"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}>
+    {...props}
+  >
     <defs id="defs20">
       <linearGradient id="insta1">
-        <stop offset="0" stop-color="#3771c8" id="instastop2" />
-        <stop stop-color="#3771c8" offset=".128" id="instastop4" />
-        <stop offset="1" stop-color="#60f" stop-opacity="0" id="instastop6" />
+        <stop offset="0" stopColor="#3771c8" id="instastop2" />
+        <stop stopColor="#3771c8" offset=".128" id="instastop4" />
+        <stop offset="1" stopColor="#60f" stop-opacity="0" id="instastop6" />
       </linearGradient>
       <linearGradient id="insta2">
-        <stop offset="0" stop-color="#fd5" id="instastop9" />
-        <stop offset=".1" stop-color="#fd5" id="instastop11" />
-        <stop offset=".5" stop-color="#ff543e" id="instastop13" />
-        <stop offset="1" stop-color="#c837ab" id="instastop15" />
+        <stop offset="0" stopColor="#fd5" id="instastop9" />
+        <stop offset=".1" stopColor="#fd5" id="instastop11" />
+        <stop offset=".5" stopColor="#ff543e" id="instastop13" />
+        <stop offset="1" stopColor="#c837ab" id="instastop15" />
       </linearGradient>
       <radialGradient
         id="insta3"
