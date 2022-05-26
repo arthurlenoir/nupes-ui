@@ -27,7 +27,7 @@ const TitleElement = styled.h1<{ variant?: TitleVariant }>`
   font-family: "Apotek Comp Black";
   text-transform: uppercase;
   padding: 8px 16px;
-  margin: 8px -16px 16px;
+  margin: 80px -16px 16px;
   ${({ theme, variant }) =>
     variant === "primary" &&
     css`
@@ -42,6 +42,10 @@ const TitleElement = styled.h1<{ variant?: TitleVariant }>`
     `}
 `;
 
+const StyledHighlight = styled(Highlight)`
+  font-weight: normal;
+`;
+
 export const Title: React.FC<TitleProps> = ({
   children,
   variant,
@@ -51,7 +55,7 @@ export const Title: React.FC<TitleProps> = ({
   return (
     <TitleElement variant={variant} {...props}>
       {highlightVariant ? (
-        <Highlight variant={highlightVariant}>{children}</Highlight>
+        <StyledHighlight variant={highlightVariant}>{children}</StyledHighlight>
       ) : (
         children
       )}

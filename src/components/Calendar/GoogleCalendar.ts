@@ -1,3 +1,5 @@
+import { CalendarItem } from "./types";
+
 declare global {
   interface Window {
     gapi: {
@@ -33,19 +35,6 @@ interface CalendarEventsResult {
   items: CalendarItem[];
 }
 
-export interface CalendarTime {
-  dateTime: string;
-  timeZone?: string;
-}
-
-export interface CalendarItem {
-  description: string;
-  summary: string;
-  location: string;
-  end: CalendarTime;
-  start: CalendarTime;
-  status: string;
-}
 const loadCalendar = (googleApiKey: string): Promise<boolean> => {
   return new Promise<boolean>((resolve, reject) => {
     window.gapi.load("client", () => {

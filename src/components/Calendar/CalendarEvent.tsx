@@ -3,11 +3,12 @@ import styled, { css } from "styled-components";
 import { Highlight } from "../Highlight";
 import { SubTitle } from "../SubTitle";
 import { Text } from "../Text";
-import { CalendarItem } from "./GoogleCalendar";
+import { CalendarItem } from "./types";
 
 interface Props {
   event: CalendarItem;
   preview?: boolean;
+  link?: string;
 }
 
 interface ContainerProps {
@@ -20,6 +21,16 @@ const EventContainer = styled.div<ContainerProps>`
   padding: 16px 12px;
   min-width: 300px;
   flex: 1 1 100%;
+  color: inherit;
+  text-decoration: none;
+  &:hover,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  ${({ theme }) => css`
+    border-color: ${theme.colors.secondary.background};
+  `}
   ${({ preview }) =>
     preview &&
     css`
@@ -30,16 +41,10 @@ const EventContainer = styled.div<ContainerProps>`
 const EventSummary = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 16px;
   white-space: nowrap;
-`;
-
-const SmallHighlight = styled(Highlight)`
-  ::before {
-    left: 0;
-    right: 0;
-  }
+  font-size: 18px;
 `;
 
 const EventTitle = styled(SubTitle)`
@@ -47,7 +52,6 @@ const EventTitle = styled(SubTitle)`
   white-space: normal;
   font-family: "Acumin Pro Condensed Black";
   margin: 0;
-  text-align: right;
 `;
 
 const DateContainer = styled(Text)`
@@ -71,41 +75,42 @@ const EventDescription = styled(Text)`
   line-height: 1.2em;
 `;
 
-const htmlDecode = (htmlText: string) => {
-  const e = document.createElement("div");
-  e.innerHTML = htmlText;
-  return e.childNodes.length === 0 ? "" : (e.childNodes[0].nodeValue as string);
-};
+const StyledHighlight = styled(Highlight)`
+  font-weight: normal;
+`;
 
-const CalendarEvent: React.FC<Props> = ({ event, preview = false }) => {
+const CalendarEvent: React.FC<Props> = ({ event, link, preview = false }) => {
   const start = new Date(Date.parse(event.start.dateTime));
   const end = new Date(Date.parse(event.end.dateTime));
   const location = event.location
     ? event.location.replace(/, France$/, "")
     : "";
   return (
-    <EventContainer key={event.start.dateTime} preview={preview}>
+    <EventContainer
+      key={event.start.dateTime}
+      preview={preview}
+      href={preview ? link : undefined}
+      as={preview && link ? "a" : undefined}
+    >
+      <EventTitle>{event.summary}</EventTitle>
       <EventSummary>
         <DateContainer>
-          <Highlight small>
+          <StyledHighlight small>
             {start.toLocaleDateString(undefined, {
               day: "2-digit",
               month: "long",
             })}
-          </Highlight>
+          </StyledHighlight>
         </DateContainer>
         <TimeContainer>
           {start.toLocaleTimeString(undefined, { timeStyle: "short" })} -{" "}
           {end.toLocaleTimeString(undefined, { timeStyle: "short" })}
         </TimeContainer>
-        <EventTitle>{event.summary}</EventTitle>
       </EventSummary>
       {location && <EventLocation>{location}</EventLocation>}
       {!preview && event.description && (
         <EventDescription>
-          <div
-            dangerouslySetInnerHTML={{ __html: htmlDecode(event.description) }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: event.description }} />
         </EventDescription>
       )}
     </EventContainer>

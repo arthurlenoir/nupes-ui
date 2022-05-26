@@ -1,12 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import CalendarEvent from "./CalendarEvent";
-import {
-  CalendarItem,
-  listUpcomingEvents,
-  loadGoogleApi,
-} from "./GoogleCalendar";
+import { listUpcomingEvents, loadGoogleApi } from "./GoogleCalendar";
 import { Text } from "../Text";
 import styled from "styled-components";
+import { CalendarItem } from "./types";
 
 interface Props {
   calendarId: string;
@@ -15,6 +12,7 @@ interface Props {
   preview?: boolean;
   loadingText?: React.ReactNode;
   noEventsText?: React.ReactNode;
+  link?: string;
 }
 
 const EventsContainer = styled.div`
@@ -31,6 +29,7 @@ export const Calendar: React.FC<Props> = ({
   limit = 4,
   loadingText,
   noEventsText,
+  link,
 }) => {
   const [events, setEvents] = useState<CalendarItem[]>();
   useEffect(() => {
@@ -46,9 +45,10 @@ export const Calendar: React.FC<Props> = ({
         key={event.start.dateTime}
         event={event}
         preview={preview}
+        link={link}
       />
     ),
-    [preview]
+    [preview, link]
   );
 
   if (!events) return <Text>{loadingText || "Chargement en cours..."}</Text>;

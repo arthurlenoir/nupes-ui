@@ -15,12 +15,20 @@ const SubTitleElement = styled.h2`
   font-weight: normal;
 `;
 
+const StyledHighlight = styled(Highlight)`
+  font-weight: normal;
+`;
+
 export const SubTitle: React.FC<SubTitleProps> = ({
   variant,
   children,
   ...props
 }) => (
   <SubTitleElement {...props}>
-    {variant ? <Highlight variant={variant}>{children}</Highlight> : children}
+    {variant ? (
+      <StyledHighlight variant={variant}>{children}</StyledHighlight>
+    ) : (
+      children
+    )}
   </SubTitleElement>
 );
