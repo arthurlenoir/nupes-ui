@@ -11,7 +11,8 @@ export interface SubTitleProps
 }
 
 const SubTitleElement = styled.h2`
-  font-family: "Acumin Pro Condensed Black";
+  font-family: "Barlow";
+font-weight: 500;
   font-weight: normal;
 `;
 

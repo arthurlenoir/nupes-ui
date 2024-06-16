@@ -23,7 +23,8 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   background-color: ${OtherColors.WHITE};
   color: ${OtherColors.BLACK};
-  font-family: "Acumin Pro";
+  font-family: "Barlow";
+  font-weight: 400;
   font-size: 16px;
   display: flex;
   align-items: center;

@@ -6,7 +6,8 @@ export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 }
 
 const TextElement = styled.p`
-  font-family: "Acumin Pro";
+  font-family: "Barlow";
+font-weight: 400;
   line-height: 1.2em;
 `;
 

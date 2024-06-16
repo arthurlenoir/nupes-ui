@@ -1,22 +1,22 @@
 export enum NupesColors {
-  GREEN = "rgb(52,173,108)",
-  YELLOW = "rgb(255,236,0)",
-  RED = "rgb(245,59,59)",
-  PINK = "rgb(248,49,160)",
-  PURPLE = "rgb(80,37,130)",
+  GREEN = "#4BB166",
+  YELLOW = "#FFEC00",
+  RED = "#EF1926",
+  PINK = "#E6255B",
+  PURPLE = "#9A36E0",
 }
 
 export enum LightNupesColors {
-  GREEN = "rgba(52,173,108,0.5)",
-  YELLOW = "rgba(255,236,0,0.5)",
-  RED = "rgba(245,59,59,0.5)",
-  PINK = "rgba(248,49,160,0.5)",
-  PURPLE = "rgba(80,37,130,0.5)",
+  GREEN = "#4BB1667F",
+  YELLOW = "#FFEC007F",
+  RED = "#EF19267F",
+  PINK = "#E6255B7F",
+  PURPLE = "#9A36E07F",
 }
 
 export enum OtherColors {
   WHITE = "rgb(255, 255, 255)",
-  BLACK = "rgb(0, 0, 0)",
+  BLACK = "#1D1D1B",
 }
 
 export type Colors = NupesColors | OtherColors;

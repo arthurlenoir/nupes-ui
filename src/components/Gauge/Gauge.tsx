@@ -45,7 +45,8 @@ const GaugeContainer = styled.div<GaugeContainerProps>`
 `;
 
 const GaugeValue = styled.div`
-  font-family: "Acumin Pro Condensed Black";
+  font-family: "Barlow";
+font-weight: 500;
   line-height: 1em;
   white-space: nowrap;
 `;

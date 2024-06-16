@@ -8,7 +8,8 @@ export interface InputProps
 }
 
 const Label = styled.label<{ isFocus?: boolean }>`
-  font-family: "Acumin Pro";
+  font-family: "Barlow";
+  font-weight: 400;
   font-size: 18px;
   border-bottom: 1px solid black;
   padding: 8px 0 0;
@@ -64,7 +65,8 @@ const InputField = styled.input`
   width: 100%;
   padding: 8px 0 4px;
   margin: 0;
-  font-family: "Acumin Pro";
+  font-family: "Barlow";
+  font-weight: 400;
   font-size: 18px;
   background: none;
 `;

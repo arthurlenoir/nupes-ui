@@ -50,7 +50,8 @@ const EventSummary = styled.div`
 const EventTitle = styled(SubTitle)`
   flex: 1;
   white-space: normal;
-  font-family: "Acumin Pro Condensed Black";
+  font-family: "Barlow";
+font-weight: 500;
   margin: 0;
 `;
 
@@ -61,7 +62,8 @@ const DateContainer = styled(Text)`
 
 const TimeContainer = styled(Text)`
   margin: 5px 8px 0 0;
-  font-family: "Acumin Pro Condensed Black";
+  font-family: "Barlow";
+font-weight: 500;
 `;
 
 const EventLocation = styled(Text)`

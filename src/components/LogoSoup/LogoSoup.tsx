@@ -1,5 +1,4 @@
 import {
-  LogoEELV,
   LogoLFI,
   LogoPCF,
   LogoND,
@@ -11,6 +10,7 @@ import {
 } from "../Logos";
 import React from "react";
 import styled from "styled-components";
+import { LogoEcolo } from "../Logos/LogoEcolo";
 
 enum PartyNames {
   LFI = "LFI",
@@ -29,8 +29,8 @@ interface Props {
 }
 
 const DEFAULT_LOGOS: PartyNames[] = [
-  PartyNames.LFI,
   PartyNames.EELV,
+  PartyNames.LFI,
   PartyNames.PS,
   PartyNames.PCF,
   PartyNames.GenerationE,
@@ -41,7 +41,7 @@ const DEFAULT_LOGOS: PartyNames[] = [
 
 const LogoPerName: Record<PartyNames, React.FC> = {
   [PartyNames.LFI]: () => <LogoLFI height={70} />,
-  [PartyNames.EELV]: () => <LogoEELV height={80} />,
+  [PartyNames.EELV]: () => <LogoEcolo height={70} />,
   [PartyNames.PS]: () => <LogoPS height={70} />,
   [PartyNames.PCF]: () => <LogoPCF height={70} />,
   [PartyNames.GenerationE]: () => <LogoGenerationE width={150} />,

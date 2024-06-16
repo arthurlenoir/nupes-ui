@@ -10,7 +10,8 @@ interface HighlightProps {
 export const Highlight = styled.span<HighlightProps>`
   position: relative;
   font-weight: bold;
-  font-family: "Acumin Pro Condensed Black";
+  font-family: "Barlow";
+  font-weight: 500;
   white-space: nowrap;
   &:before {
     content: "";
