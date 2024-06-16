@@ -24,7 +24,8 @@ const titleVariantToHighlightVariant: Record<
 };
 
 const TitleElement = styled.h1<{ variant?: TitleVariant }>`
-  font-family: "Apotek Comp Black";
+  font-family: "Barlow";
+  font-weight: 900;
   text-transform: uppercase;
   padding: 8px 16px;
   margin: 80px -16px 16px;
@@ -42,9 +43,7 @@ const TitleElement = styled.h1<{ variant?: TitleVariant }>`
     `}
 `;
 
-const StyledHighlight = styled(Highlight)`
-  font-weight: normal;
-`;
+const StyledHighlight = styled(Highlight)``;
 
 export const Title: React.FC<TitleProps> = ({
   children,

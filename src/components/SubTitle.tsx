@@ -12,13 +12,10 @@ export interface SubTitleProps
 
 const SubTitleElement = styled.h2`
   font-family: "Barlow";
-font-weight: 500;
-  font-weight: normal;
+  font-weight: 500;
 `;
 
-const StyledHighlight = styled(Highlight)`
-  font-weight: normal;
-`;
+const StyledHighlight = styled(Highlight)``;
 
 export const SubTitle: React.FC<SubTitleProps> = ({
   variant,

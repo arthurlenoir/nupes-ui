@@ -77,9 +77,7 @@ const EventDescription = styled(Text)`
   line-height: 1.2em;
 `;
 
-const StyledHighlight = styled(Highlight)`
-  font-weight: normal;
-`;
+const StyledHighlight = styled(Highlight)``;
 
 const CalendarEvent: React.FC<Props> = ({ event, link, preview = false }) => {
   const start = new Date(Date.parse(event.start.dateTime));
